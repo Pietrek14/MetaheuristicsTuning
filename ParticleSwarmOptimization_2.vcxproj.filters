@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="utils">
+      <UniqueIdentifier>{f2cb4c80-2a77-46b9-868e-ccdf93f5c1dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{38e0d174-08e5-47d0-9254-06e8ac8ce7d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="benchmarks">
+      <UniqueIdentifier>{36b7585d-1ccc-46d1-9e1f-046dbf4722e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{83d9e23f-ec21-43d1-a7cc-4ee2cb9b40f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pso">
+      <UniqueIdentifier>{c258dc89-3cbe-498a-9ed0-70b412874688}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests">
+      <UniqueIdentifier>{8fcef71a-542f-47c6-bf8e-367c485e98d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sga">
+      <UniqueIdentifier>{63bf402c-4b7a-4fe6-bc6a-5448ace5d41d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cs">
+      <UniqueIdentifier>{a0d8ddc7-8c9f-4680-b1a2-132cf57c8e50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gwo">
+      <UniqueIdentifier>{326ce1dd-1730-426d-9d5f-e657d6be7436}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="abc">
+      <UniqueIdentifier>{e6c4d619-f149-4bad-b102-320388a0dafc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="timer.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="csv_writer.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="print.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="random.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="statistics.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="objective.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="rastrigin.h">
+      <Filter>benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="sphere.h">
+      <Filter>benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="math.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="particle.h">
+      <Filter>pso</Filter>
+    </ClInclude>
+    <ClInclude Include="particle_swarm_optimization.h">
+      <Filter>pso</Filter>
+    </ClInclude>
+    <ClInclude Include="individual.h">
+      <Filter>sga</Filter>
+    </ClInclude>
+    <ClInclude Include="crossover.h">
+      <Filter>sga</Filter>
+    </ClInclude>
+    <ClInclude Include="ackley.h">
+      <Filter>benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="griewank.h">
+      <Filter>benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="schwefel.h">
+      <Filter>benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="mutation.h">
+      <Filter>sga</Filter>
+    </ClInclude>
+    <ClInclude Include="selection.h">
+      <Filter>sga</Filter>
+    </ClInclude>
+    <ClInclude Include="trace_logger.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="series.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="csv_reader.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="sga_hyperparams.h">
+      <Filter>sga</Filter>
+    </ClInclude>
+    <ClInclude Include="pso_hyperparams.h">
+      <Filter>pso</Filter>
+    </ClInclude>
+    <ClInclude Include="objective_factory.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="cuckoo_search.h">
+      <Filter>cs</Filter>
+    </ClInclude>
+    <ClInclude Include="cuckoo.h">
+      <Filter>cs</Filter>
+    </ClInclude>
+    <ClInclude Include="cs_hyperparams.h">
+      <Filter>cs</Filter>
+    </ClInclude>
+    <ClInclude Include="grey_wolf_optimization.h">
+      <Filter>gwo</Filter>
+    </ClInclude>
+    <ClInclude Include="wolf.h">
+      <Filter>gwo</Filter>
+    </ClInclude>
+    <ClInclude Include="gwo_hyperparams.h">
+      <Filter>gwo</Filter>
+    </ClInclude>
+    <ClInclude Include="field.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="visualization.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="cs_rastrigin.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="cs_generate.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="cs_rosenbrock.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="pso_generate.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="pso_rastrigin.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="pso_rosenbrock.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="gwo_generate.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="gwo_rastrigin.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="gwo_rosenbrock.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="sga_generate.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="sga_rastrigin.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="sga_rosenbrock.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="convergence_policy.h">
+      <Filter>gwo</Filter>
+    </ClInclude>
+    <ClInclude Include="abc_hyperparams.h">
+      <Filter>abc</Filter>
+    </ClInclude>
+    <ClInclude Include="artificial_bee_colony.h">
+      <Filter>abc</Filter>
+    </ClInclude>
+    <ClInclude Include="bee.h">
+      <Filter>abc</Filter>
+    </ClInclude>
+    <ClInclude Include="abc_generate.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="abc_selection_policy.h">
+      <Filter>abc</Filter>
+    </ClInclude>
+    <ClInclude Include="abc_rastrigin.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="abc_rosenbrock.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="rosenbrock.h">
+      <Filter>benchmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="simple_genetic_algorithm.h">
+      <Filter>sga</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
