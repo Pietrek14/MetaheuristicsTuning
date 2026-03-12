@@ -3,6 +3,7 @@
 #include "objective.h"
 #include "math.h"
 
+#include <cmath>
 
 namespace core
 {
