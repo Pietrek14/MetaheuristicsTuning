@@ -5,6 +5,7 @@
 
 #include "objective.h"
 #include "convergence_policy.h"
+#include "weight_policy.h"
 
 
 namespace gwo
@@ -21,7 +22,8 @@ namespace gwo
 		T a_factor;
 		T c_factor;
 
-		policy::convergence_policy<T> convergence_policy;
+		convergence_policy::convergence_policy<T> convergence_policy;
+		weight_policy::weight_policy<T> weight_policy;
 
 		inline static const std::vector<std::string> csv_headers =
 		{
@@ -29,6 +31,7 @@ namespace gwo
 			"a_factor",
 			"c_factor",
 			"convergence",
+			"weight",
 			"population_size",
 			"num_iterations",
 			"objective",
@@ -42,6 +45,7 @@ namespace gwo
 				{ "a_factor", std::to_string(a_factor) },
 				{ "c_factor", std::to_string(c_factor) },
 				{ "convergence", convergence_policy.name },
+				{ "weight", weight_policy.name },
 				{ "population_size", std::to_string(population_size) },
 				{ "num_iterations", std::to_string(num_iterations) },
 				{ "objective", objective.name },
@@ -55,6 +59,7 @@ namespace gwo
 				{ "objective", objective.name },
 				{ "dimensionality", std::to_string(DIM) },
 				{ "convergence", convergence_policy.name },
+				{ "weight", weight_policy.name },
 				{ "a_factor", std::to_string(a_factor) },
 				{ "c_factor", std::to_string(c_factor) }
 			};

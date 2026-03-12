@@ -22,17 +22,17 @@ namespace sga
 	template <typename T, size_t DIM>
 	struct simple_genetic_algorithm
 	{
-		template <typename T, size_t DIM>
+		template <typename T1, size_t DIM1>
 		using selection_function_t
-			= sga::selection::selection_function_t<T, DIM>;
+			= sga::selection::selection_function_t<T1, DIM1>;
 
-		template <typename T, size_t DIM>
+		template <typename T1, size_t DIM1>
 		using crossover_function_t
-			= sga::crossover::crossover_function_t<T, DIM>;
+			= sga::crossover::crossover_function_t<T1, DIM1>;
 
-		template <typename T, size_t DIM>
+		template <typename T1, size_t DIM1>
 		using mutation_function_t
-			= sga::mutation::mutation_function_t<T, DIM>;
+			= sga::mutation::mutation_function_t<T1, DIM1>;
 
 
 		hyperparams<T, DIM> state;

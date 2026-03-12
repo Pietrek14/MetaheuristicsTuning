@@ -15,12 +15,12 @@ int main()
 	//pso::run_rosenbrock_experiments();
 	//cs::run_rastrigin_experiments();
 	//cs::run_rosenbrock_experiments();
-	//gwo::run_rastrigin_experiments();
+	gwo::run_rastrigin_experiments();
 	//gwo::run_rosenbrock_experiments();
 	//sga::run_rastrigin_experiments();
 	//sga::run_rosenbrock_experiments();
 	//abc::run_rastrigin_experiments();
-	abc::run_rosenbrock_experiments();
+	// abc::run_rosenbrock_experiments();
 
 	return 0;
 }

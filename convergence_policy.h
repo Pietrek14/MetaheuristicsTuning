@@ -5,7 +5,7 @@
 #include <string>
 
 
-namespace gwo::policy
+namespace gwo::convergence_policy
 {
 	template <typename T>
 	using convergence_function_t =
