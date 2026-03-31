@@ -23,7 +23,8 @@ int main()
 	//sga::run_rosenbrock_experiments();
 	//abc::run_rastrigin_experiments();
 	//abc::run_rosenbrock_experiments();
-	gtoa::run_rastrigin_experiments();
+	//gtoa::run_rastrigin_experiments();
+	gtoa::run_rosenbrock_experiments();
 
 	return 0;
 }
