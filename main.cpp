@@ -2,6 +2,8 @@
 #include "pso_rosenbrock.h"
 #include "cs_rastrigin.h"
 #include "cs_rosenbrock.h"
+#include "gtoa_rastrigin.h"
+#include "gtoa_rosenbrock.h"
 #include "gwo_rastrigin.h"
 #include "gwo_rosenbrock.h"
 #include "sga_rastrigin.h"
@@ -15,12 +17,13 @@ int main()
 	//pso::run_rosenbrock_experiments();
 	//cs::run_rastrigin_experiments();
 	//cs::run_rosenbrock_experiments();
-	gwo::run_rastrigin_experiments();
+	//gwo::run_rastrigin_experiments();
 	//gwo::run_rosenbrock_experiments();
 	//sga::run_rastrigin_experiments();
 	//sga::run_rosenbrock_experiments();
 	//abc::run_rastrigin_experiments();
-	// abc::run_rosenbrock_experiments();
+	//abc::run_rosenbrock_experiments();
+	gtoa::run_rastrigin_experiments();
 
 	return 0;
 }
