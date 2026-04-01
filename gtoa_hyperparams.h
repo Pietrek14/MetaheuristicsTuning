@@ -18,11 +18,13 @@ namespace gtoa
 
 		// according to the authors, should be either 1 or 2
 		T teaching_factor;
+		T outstanding_percentage;
 		size_t n_leaders;
 
 		inline static const std::vector<std::string> csv_headers =
 		{
 			"teaching_factor",
+			"outstanding_percentage",
 			"n_leaders",
 			"population_size",
 			"num_iterations",
@@ -34,6 +36,7 @@ namespace gtoa
 		{
 			return {
 				{ "teaching_factor", std::to_string(teaching_factor) },
+				{ "outstanding_percentage", std::to_string(outstanding_percentage) },
 				{ "n_leaders", std::to_string(n_leaders) },
 				{ "population_size", std::to_string(population_size) },
 				{ "num_iterations", std::to_string(num_iterations) },
@@ -48,6 +51,7 @@ namespace gtoa
 				{ "objective", objective.name },
 				{ "dimensionality", std::to_string(DIM) },
 				{ "teaching_factor", std::to_string(teaching_factor) },
+				{ "outstanding_percentage", std::to_string(outstanding_percentage) },
 			};
 		}
 	};

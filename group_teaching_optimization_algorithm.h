@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <cassert>
 #include <array>
 #include <limits>
 #include <algorithm>
@@ -25,6 +26,11 @@ namespace gtoa
             T min_fitness = std::numeric_limits<T>::max();
 
             // TODO: Parametrize the outstanding to average ratio
+            size_t outstanding_count = state.population_size * state.outstanding_percentage;
+            size_t average_count = state.population_size - outstanding_count;
+
+            assert(state.outstanding_percentage <= T{ 1.0 } && state.outstanding_percentage >= T{ 0.0 });
+
 			std::vector<student<T, DIM>> population(state.population_size);
 			for (student<T, DIM>& s: population)
 			{
@@ -42,7 +48,7 @@ namespace gtoa
 
             std::vector<std::array<T, DIM>> pre_teacher_position(population.size());
             std::vector<T> teacher_phase_weight(population.size());
-            std::vector<T> teacher_phase_conformism_factor(population.size() / 2);
+            std::vector<T> teacher_phase_conformism_factor(outstanding_count);
             std::vector<std::array<T, DIM>> teacher_phase_shift(population.size());
             std::vector<T> student_phase_extrapolation_factor(population.size());
             std::vector<T> student_phase_cooperation_factor(population.size());
@@ -99,14 +105,14 @@ namespace gtoa
 
                 // teacher phase
 				std::nth_element(population.begin(),
-                    population.begin() + population.size() / 2, population.end(),
+                    population.begin() + outstanding_count, population.end(),
                     [](const student<T, DIM>& s1, const student<T, DIM>& s2)
 					{
 						return s1.fitness < s2.fitness;
 					});
 
                 // outstanding students
-                for(size_t i{}; i < population.size() / 2; i++) {
+                for(size_t i{}; i < outstanding_count; i++) {
                     teacher_phase_weight[i] = random_value<T>();
                     teacher_phase_conformism_factor[i] = random_value<T>();
                 }
@@ -116,14 +122,14 @@ namespace gtoa
                     T sum{};
                     
                     for(auto it = population.begin();
-                        it != population.begin() + population.size() / 2; ++it)
+                        it != population.begin() + outstanding_count; ++it)
                     {
                         sum += it->position[d];
                     }
                     
-                    T mean_outstanding_position = sum / (population.size() / 2);
+                    T mean_outstanding_position = sum / outstanding_count;
 
-                    for(size_t i = 0; i < population.size() / 2; ++i)
+                    for(size_t i = 0; i < outstanding_count; ++i)
                     {
                         T learning_shift = teacher_phase_conformism_factor[i] * mean_outstanding_position
                             + (1 - teacher_phase_conformism_factor[i]) * population[i].position[d];
@@ -133,7 +139,7 @@ namespace gtoa
                 }
                 
                 // average students
-                for(size_t i = population.size() / 2; i < population.size(); ++i) {
+                for(size_t i = outstanding_count; i < population.size(); ++i) {
                     teacher_phase_weight[i] = random_value<T>();
 
                     for(size_t d{}; d < DIM; ++d)
